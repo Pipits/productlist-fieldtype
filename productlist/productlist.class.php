@@ -19,7 +19,7 @@ class PerchFieldType_productlist extends PerchAPI_FieldType
         
         $ShopAPI    = new PerchAPI(1, 'perch_shop');
 	    $Products   = new PerchShop_Products($ShopAPI);
-        $products = $Products->all();
+        $products = $Products->get_for_admin_listing(false);
 
         $opts   = array();
         $opts[] = array('label'=>'', 'value'=>'');
